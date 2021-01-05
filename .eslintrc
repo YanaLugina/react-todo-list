@@ -1,11 +1,9 @@
 {
   "parser": "babel-eslint",
   "extends": [
+    "react-app",
     "standard",
-    "standard-react",
-    "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react"
+    "standard-react"
   ],
   "env": {
     "node": true
@@ -19,15 +17,29 @@
   },
   "settings": {
     "react": {
-      "version": "16"
+      "version": "17"
     }
   },
   "rules": {
-    "space-before-function-paren": 0,
-    "react/prop-types": 0,
-    "react/jsx-handler-names": 0,
-    "react/jsx-fragments": 0,
-    "react/no-unused-prop-types": 0,
-    "import/export": 0
-  }
+    // Indent with 4 spaces
+    "indent": ["error", 4],
+
+    // Indent JSX with 4 spaces
+    "react/jsx-indent": ["error", 4],
+
+    // Indent props with 4 spaces
+    "react/jsx-indent-props": ["error", 4],
+
+    "semi": ["error", "always"],
+    "space-before-function-paren": [2, "never"],
+
+    "react/jsx-curly-spacing": ["error", {
+      "attributes": { "when": "never" },
+      "children": { "when": "always" },
+      "allowMultiline": true
+    }],
+
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
+    }
 }

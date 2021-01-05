@@ -1,6 +1,13 @@
-import React from 'react'
-import styles from './styles.module.css'
+import React from 'react';
+import TodoApp from './TodoApp';
+import PropTypes from 'prop-types';
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export const TodoListComponent = ({ todoData }) => {
+    return (
+        <TodoApp todoData={todoData} />
+    );
+};
+
+TodoListComponent.propTypes = {
+    todoData: PropTypes.array
+};
