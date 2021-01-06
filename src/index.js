@@ -1,13 +1,17 @@
 import React from 'react';
-import TodoApp from './TodoApp';
+import TodoApp from './components/TodoApp';
 import PropTypes from 'prop-types';
 
-export const TodoListComponent = ({ todoData }) => {
+const TodoListComponent = ({ todoData, handleMouseLeave }) => {
+    const initialHandleMouseLeave = () => {};
     return (
-        <TodoApp todoData={todoData} />
+        <TodoApp todoData={todoData} handleMouseLeave={handleMouseLeave || initialHandleMouseLeave} />
     );
 };
 
 TodoListComponent.propTypes = {
-    todoData: PropTypes.array
+    todoData: PropTypes.array,
+    handleMouseLeave: PropTypes.func
 };
+
+export default TodoListComponent;
