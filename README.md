@@ -15,17 +15,22 @@ npm install --save @yana4961/react-todo-list
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from '@yana4961/react-todo-list'
+import TodoList from '@yana4961/react-todo-list'
 import '@yana4961/react-todo-list/dist/index.css'
 
 class Example extends Component {
   const todoData = [
-    { label: 'First, i todo ...', id: 1 },
-    { label: 'Second, i todo ...', id: 2 }
+      { label: 'one', id: 1, done: false, important: true },
+      { label: 'two', id: 2, done: false, important: false },
+      { label: 'three', id: 3, done: true, important: true },
   ];
+  
+  const yourHandleFunction = (updatedItems) => {
+      console.log(updatedItems);
+  }
 
   render() {
-    return <MyComponent todoData={todoData} />
+    return <TodoList todoData={todoData} handleMouseLeave={yourHandleFunction} />
   }
 }
 ```

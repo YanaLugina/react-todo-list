@@ -1,0 +1,9 @@
+.todoListGroup {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: stretch;
+    justify-content: flex-start;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    flex-grow: 1;
+}
