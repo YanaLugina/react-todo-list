@@ -1,0 +1,70 @@
+.todoItem {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 4px 10px;
+}
+
+.todoItem:last-child {
+    border: none;
+}
+
+.todoItemLabel {
+    margin-left: 1.25rem;
+    line-height: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.buttons {
+    padding-left: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoItemButton {
+    text-align: center;
+    height: 35px;
+    margin: 3px;
+    background: transparent;
+    padding-top: 3px;
+    transition: 200ms all ease-out;
+    cursor: pointer;
+}
+
+.todoItemButton:hover {
+    transition: 200ms all ease-out;
+}
+
+.todoItem.done .todoItemLabel {
+    text-decoration: line-through;
+}
+
+.todoItem.important .todoItemLabel {
+    font-weight: bold;
+    color: steelblue;
+}
+
+.todoItemButton.trash {
+    color: #dc3545;
+    border: 1px #dc3545 solid;
+    border-radius: 3px;
+}
+
+.todoItemButton.trash:hover {
+    background: rgba(220, 53, 69, .9);
+    color: white;
+}
+
+.todoItemButton.important {
+    color: lightseagreen;
+    border: 1px lightseagreen solid;
+    border-radius: 3px;
+}
+
+.todoItemButton.important:hover {
+    background: rgba(33, 178, 170, .9);
+    color: white;
+}

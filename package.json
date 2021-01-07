@@ -1,10 +1,13 @@
 {
   "name": "@yana4961/react-todo-list",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "ToDo list react component",
   "author": "YanaLugina &lt;yana4961@gmail.com&gt;",
   "license": "MIT",
-  "repository": "YanaLugina/react-todo-list",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanaLugina/react-todo-list.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -51,5 +54,20 @@
   },
   "files": [
     "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/YanaLugina/react-todo-list/issues"
+  },
+  "homepage": "https://github.com/YanaLugina/react-todo-list#readme",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "react-feather": "^2.0.9"
+  },
+  "keywords": [
+    "todo",
+    "list",
+    "react"
   ]
 }

@@ -1,0 +1,8 @@
+/* add css module styles here (optional) */
+
+.todoApp {
+  margin: 1em;
+  font-size: 2em;
+  display: flex;
+  flex-flow: row wrap;
+}
