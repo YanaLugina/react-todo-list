@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.';
+import TodoListComponent from '.';
 
-describe('ExampleComponent', () => {
+describe('TodoListComponent', () => {
     it('is truthy', () => {
-        expect(ExampleComponent).toBeTruthy();
+        expect(TodoListComponent).toBeTruthy();
     });
 });
