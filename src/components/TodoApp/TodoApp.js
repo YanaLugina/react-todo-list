@@ -46,7 +46,7 @@ const TodoApp = ({ todoData, handleMouseLeave }) => {
             if (todoData) {
                 return [
                     ...todoData.map((item) => {
-                        return createTodoItem(item.label, item.id, item.done, item.important);
+                        return createTodoItem(item.label, item.id, item.important, item.done);
                     })
                 ];
             } else {
@@ -58,6 +58,10 @@ const TodoApp = ({ todoData, handleMouseLeave }) => {
             }
         });
     }, [ids, todoData]);
+
+    useEffect(() => {
+        return () => setTodoDataLocal([]);
+    }, []);
 
     return (
         <div className={style.todoApp} onMouseLeave={() => handleMouseLeave(todoDataLocal)}>
